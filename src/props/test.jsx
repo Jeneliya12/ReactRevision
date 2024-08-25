@@ -1,8 +1,14 @@
-function Test({ person }) {
+function Test({ personone, persontwo }) {
   return (
     <>
-      <h1>{person.firstname}</h1>
-      <h1>{person.lastname}</h1>
+      <h1>
+        {personone.firstname}
+        {persontwo.lastname}
+      </h1>
+      <h1>
+        {personone.firstname}
+        {persontwo.lastname}
+      </h1>
     </>
   );
 }
