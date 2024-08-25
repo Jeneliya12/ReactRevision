@@ -1,15 +1,9 @@
-function Test({ personone, persontwo }) {
+function test(person, size) {
   return (
     <>
-      <h1>
-        {personone.firstname}
-        {persontwo.lastname}
-      </h1>
-      <h1>
-        {personone.firstname}
-        {persontwo.lastname}
-      </h1>
+      <img src="vite.svg" alt={person.name} width={size} height={size} />
     </>
   );
 }
-export default Test;
+
+export default test;
