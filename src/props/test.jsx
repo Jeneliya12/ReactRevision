@@ -1,8 +1,13 @@
-function test(person, size) {
+import React, { useState } from "react";
+
+function test() {
+  const [count, setCount] = useState(0);
   return (
-    <>
-      <img src="vite.svg" alt={person.name} width={size} height={size} />
-    </>
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+    </div>
   );
 }
 
