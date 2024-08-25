@@ -1,14 +1,19 @@
 import React, { useState } from "react";
+function Test() {
+  const [isVisible, setIsVisible] = useState(true);
 
-function test() {
-  const [count, setCount] = useState(0);
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
   return (
-    <div>
-      <h1>Count: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-    </div>
+    <>
+      <button onClick={toggleVisibility}>
+        {isVisible ? "Hide" : "Show"}
+        Text
+      </button>
+      {isVisible && <p>Text</p>}
+    </>
   );
 }
-
-export default test;
+export default Test;
